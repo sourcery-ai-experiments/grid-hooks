@@ -22,10 +22,14 @@ Add the following hook to your `.pre-commit-config.yaml`:
 
 ```yaml
 - repo: https://github.com/Bilbottom/grid-hooks
-  rev: v0.0.1
+  rev: v0.0.2
   hooks:
     - id: version-badge
       name: Add Grid version badge
 ```
 
-This will generate an SVG for the badge which you can then add to your README.md.
+This will generate an SVG for the badge which you can then add to your README.md with:
+
+```markdown
+[![grid-version](grid-version.svg)](https://github.com/Bilbottom/grid-hooks)
+```
