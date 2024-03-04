@@ -20,7 +20,11 @@ DEFAULT_BADGE_PATH = pathlib.Path("grid-version.svg")
 def _get_version(path: pathlib.Path) -> str:
     copier_answers = yaml.safe_load(path.read_text())
 
-    return copier_answers["_commit"]
+    # Copier used to use the key `version` but now uses `_commit` instead.
+    # However, we need both for backwards-compatibility
+    version = copier_answers.get("_commit") or copier_answers.get("version")
+
+    return version or "Unknown"
 
 
 def _save_badge(version: str, target: pathlib.Path) -> None:

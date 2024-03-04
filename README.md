@@ -2,8 +2,7 @@
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
-[![coverage](https://raw.githubusercontent.com/Bilbottom/grid-hooks/main/coverage.svg)](https://github.com/dbrgn/coverage-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/Bilbottom/grid-hooks)
+[![coverage](coverage.svg)](https://github.com/dbrgn/coverage-badge)
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -23,10 +22,14 @@ Add the following hook to your `.pre-commit-config.yaml`:
 
 ```yaml
 - repo: https://github.com/Bilbottom/grid-hooks
-  rev: v0.0.1
+  rev: v0.0.2
   hooks:
     - id: version-badge
       name: Add Grid version badge
 ```
 
-This will generate an SVG for the badge which you can then add to your README.md.
+This will generate an SVG for the badge which you can then add to your README.md with:
+
+```markdown
+[![grid-version](grid-version.svg)](https://github.com/Bilbottom/grid-hooks)
+```
