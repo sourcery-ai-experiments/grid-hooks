@@ -1,0 +1,9 @@
+---
+- id: version-badge
+  name: Generate a badge with the Grid version
+  description: >
+    Open the copier answers file to grab the Grid template version.
+  entry: grid-version-badge
+  language: python
+  pass_filenames: false
+  always_run: true

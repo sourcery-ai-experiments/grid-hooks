@@ -11,6 +11,9 @@ authors = ["Bilbottom"]
 readme = "README.md"
 packages = [{include = "grid_hooks"}]
 
+[tool.poetry.scripts]
+grid-version-badge = "grid_hooks.grid_version_badge:main"
+
 [tool.poetry.dependencies]
 python = "^3.9"
 
