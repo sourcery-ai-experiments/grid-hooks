@@ -1,0 +1,19 @@
+version: 0.2
+project_configuration:
+  set_name: some_grid_set_name
+  squad_name: avocado
+  squad_email: gdp_avocado@sainsburys.co.uk
+  irm: our_irm
+transforms:
+  depends_on:
+    - ext_load_aip_parameters_stage_all
+    - dp_0000_capabilities_grid_testing
+  catchup: false
+  tags:
+    - AVOCADO
+    - IRM_NAME
+    - SCHEMA
+  description: Sample config for testing pre-commit hooks
+  default_args:
+    start_date: datetime(2022, 1, 1)
+  dbt_tag: SOME_GRID_SET_NAME

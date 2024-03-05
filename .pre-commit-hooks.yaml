@@ -7,3 +7,9 @@
   language: python
   pass_filenames: false
   always_run: true
+- id: comment-dependencies
+  name: Add comments with team names for `depends_on` blocks
+  entry: comment-dependencies
+  language: python
+  pass_filenames: true
+  files: "dp-*/dp_*/configs/*.ya?ml"
