@@ -13,11 +13,13 @@ packages = [{include = "grid_hooks"}]
 
 [tool.poetry.scripts]
 grid-version-badge = "grid_hooks.grid_version_badge:main"
+comment-dependencies = "grid_hooks.comment_dependencies:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
 pyyaml = "^6.0.1"
 pybadges = "^3.0.1"
+pygithub = "^2.2.0"
 
 [tool.poetry.group]
 dev.optional = true
